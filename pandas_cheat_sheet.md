@@ -15,7 +15,6 @@ df.rename(columns={'Old_Name' : 'New_Name'})
 # keep only selected columns
 df = df[['col1', 'col2']]
 ```
-
 ``` python
 # open all columns in df
 pd.set_option('max_columns', None)
@@ -97,8 +96,14 @@ sort_values(by=['col'], ascending=False)
 
 ### Selection
 ``` python
-# iloc selection
-df.iloc[:,:8] # first row , second columns # :all before 8 index starts at 0
+# iloc
+df.iloc[rows_index, col_index]
+df.iloc[:,:8] # select all rows column zero to 8
+
+# loc 
+df.loc[:, 'col_name'] # select all rows 
+df.loc['string', 'col_name'].contains('a') # select all rows in col where value contains 'a'
+
 ```
 
 ### Anti-join
