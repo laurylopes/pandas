@@ -2,40 +2,7 @@
 # Pandas Cheat Sheet
 <img width="200" alt="image" src="https://github.com/user-attachments/assets/a6f18a27-6575-462c-b9c1-6eaf0b495565">
 
-
-``` python
-# f print python
-print(f' My name is : {name} and I am {age} years old')
-```
-
-``` python
-# open all columns in df
-pd.set_option('max_columns', None)
-```
-
-### String manipulation 
-``` python
-# contains 
-df['col'].str.contains('containString')
-
-# replace
-df['col'].str.replace('old', 'new')
-
-# start with
-df['col'].str.startswith('A')
-```
-
-### Anti-join
-``` python
-# inner join
-merge = pd.merge(df1, df2, on ='key', how='inner')
-
-# keep values of interest to filter => equivalent to SELECT DISTINCT in SQL
-array = merge['pKey_column'].unique() 
-
-# select all the values in df that are different from the values in array
-df[~df['pKey_column'].isin(array)]
-```
+Hello welcome to my pandas cheat sheet. Everyhting you need to know to start with pandas. 
 
 ### Columns manipulation
 ``` python
@@ -47,6 +14,11 @@ df.rename(columns={'Old_Name' : 'New_Name'})
 
 # keep only selected columns
 df = df[['col1', 'col2']]
+```
+
+``` python
+# open all columns in df
+pd.set_option('max_columns', None)
 ```
 
 ### Concatenation
@@ -72,6 +44,18 @@ df_files = [pd.read_csv(os.path.join('Data', file), on_bad_lines ='skip', skipro
 
 # 4. concat all df_files into df
 df = pd.concat(df_files, ignore_index =False)
+```
+
+### String manipulation 
+``` python
+# contains 
+df['col'].str.contains('containString')
+
+# replace
+df['col'].str.replace('old', 'new')
+
+# start with
+df['col'].str.startswith('A')
 ```
 
 ### Date Time Format
@@ -115,4 +99,22 @@ sort_values(by=['col'], ascending=False)
 ``` python
 # iloc selection
 df.iloc[:,:8] # first row , second columns # :all before 8 index starts at 0
+```
+
+### Anti-join
+``` python
+# inner join
+merge = pd.merge(df1, df2, on ='key', how='inner')
+
+# keep values of interest to filter => equivalent to SELECT DISTINCT in SQL
+array = merge['pKey_column'].unique() 
+
+# select all the values in df that are different from the values in array
+df[~df['pKey_column'].isin(array)]
+```
+
+### Print values
+``` python
+# f print python
+print(f' My name is : {name} and I am {age} years old')
 ```
