@@ -67,7 +67,7 @@ df['year'] = df['col'].dt.year
 df['month'] = df['col'].dt.month
 df['day'] = df['col'].dt.day
 
-# debug erros
+# deal with erros
 pd.to_datetime(df['col'], errors='coerce')
 ```
 
