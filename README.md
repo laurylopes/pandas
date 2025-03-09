@@ -85,7 +85,7 @@ df['col1'].nunique()
 
 ### Group By
 ``` python
-# group by with more than one aggregate
+# group by on more than one column
 
 # 1. create disctionnary with 'column' : 'function'
 dico_agg = {'col1': ['agg1'], 'col2': ['agg2'], 'col3' : ['agg3']}
