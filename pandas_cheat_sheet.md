@@ -2,7 +2,7 @@
 # Pandas Cheat Sheet
 <img width="200" alt="image" src="https://github.com/user-attachments/assets/a6f18a27-6575-462c-b9c1-6eaf0b495565">
 
-Hello welcome to my pandas cheat sheet. Everyhting you need to know to start with pandas. 
+Hello, and welcome to my Pandas cheat sheet!
 
 ### Columns manipulation
 ``` python
