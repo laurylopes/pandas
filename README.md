@@ -102,7 +102,9 @@ df.iloc[:,:8] # select all rows column zero to 8
 
 # loc 
 df.loc['rows_values', 'col_name'] # select all rows 
-df.loc['string', 'col_name'].contains('a') # select all rows in col where value contains 'a'
+df.loc['string', 'col_name'].str.contains('a') # select all rows in col where value contains 'a'
+
+# loc and iloc are uselful not only to select but also to filter the dataframe with a certain condition like the example above
 
 ```
 
