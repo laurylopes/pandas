@@ -75,6 +75,12 @@ pd.to_datetime(df['col'], errors='coerce')
 ``` python
 # drop duplicates
 df.drop_duplicates(subset = 'column')
+
+# count duplicates
+df['col1'].duplicated().sum()
+
+# count unique values
+df['col1'].nunique()
 ```
 
 ### Group By
